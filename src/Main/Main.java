@@ -16,9 +16,9 @@ public class Main {
 
         try {
             System.out.println("Try to withdraw $600");
-            c.withdraw(600);
+            c.withdraw(600);            // will not throw an InsufficientFundsException
             c.showBalance();
-            c.withdraw(1000);
+            c.withdraw(1000);           // will throw an InsufficientFundsException
         } catch (InsufficientFundsException e) {
             System.out.printf("Sorry you need %.2f to complete that transaction", e.getLackingAmount());
         }

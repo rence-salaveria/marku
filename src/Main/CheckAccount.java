@@ -17,8 +17,8 @@ public class CheckAccount {
         if (balance >= amount) {
             balance -= amount;
         } else {
-            double amountLacking = amount - balance;
-            throw new InsufficientFundsException(amountLacking);
+            double amountLacking = amount - balance;        // compute lacking amount
+            throw new InsufficientFundsException(amountLacking);        // pass lacking amount para sa getLackingAmount()
         }
     }
 
